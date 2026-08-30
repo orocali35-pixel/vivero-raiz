@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Vivero Raiz - Intranet</title>
+    <style>
+        .boton-estilo {
+            background-color: black;
+            color: yellow;
+            padding: 10px 20px;
+            text-decoration: none;
+            display: inline-block;
+            font-weight: bold;
+            border-radius: 5px;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Recordatorio: Este es el formulario de entrada para empleados -->
+
+    <h1 style="color: blue; background-color: lightblue; padding: 10px;">
+        Ingreso al Sistema - Vivero Raiz
+    </h1>
+
+    <p>
+        Esta zona es exclusiva para el personal del vivero. Por favor introduce tus datos de acceso.
+    </p>
+
+    <form>
+        <p>
+            Usuario:<br>
+            <input type="text" name="usuario">
+        </p>
+
+        <p>
+            Contraseña:<br>
+            <input type="password" name="clave">
+        </p>
+
+        <p>
+            <input type="submit" value="Ingresar">
+        </p>
+    </form>
+
+    <a href="index.html" class="boton-estilo">Volver al Inicio</a>
+
+</body>
+</html>

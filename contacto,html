@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Vivero Raiz - Contacto</title>
+    <style>
+        .boton-estilo {
+            background-color: black;
+            color: yellow;
+            padding: 10px 20px;
+            text-decoration: none;
+            display: inline-block;
+            font-weight: bold;
+            border-radius: 5px;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 style="color: blue; background-color: lightblue; padding: 10px;">
+        Contacto - Vivero Raiz
+    </h1>
+
+    <p>
+        Dejanos tu consulta y te responderemos a la brevedad por correo electronico.
+    </p>
+
+    <form>
+        <p>
+            Nombre:<br>
+            <input type="text" name="nombre">
+        </p>
+
+        <p>
+            Email:<br>
+            <input type="text" name="correo">
+        </p>
+
+        <p>
+            Tu Consulta:<br>
+            <input type="text" name="mensaje">
+        </p>
+
+        <p>
+            <input type="submit" value="Enviar Formulario">
+        </p>
+    </form>
+
+    <a href="index.html" class="boton-estilo">Volver al Inicio</a>
+
+</body>
+</html>
