@@ -1,0 +1,19 @@
+.boton-estilo {
+            background-color: black;
+            color: yellow;
+            padding: 10px 20px;
+            text-decoration: none;
+            display: inline-block;
+            font-weight: bold;
+            border-radius: 5px;
+            margin-top: 15px;
+        }
+
+
+        h1 {
+            color: blue;
+            background-color: lightgreen;
+            padding: 10px;
+            
+
+        }

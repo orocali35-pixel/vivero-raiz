@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Intranet - Formulario de Planta</title>
+    <link rel="stylesheet" href="planta.css">
+</head>
+<body>
+    <nav>
+        <a href="index.html">⬅️ Volver al Sitio Público</a> |
+        <a href="listado.html">Listado de Plantas</a> |
+        <a href="planta-form.html">Cargar Planta</a>
+    </nav>
+
+    <h1>Gestión de Planta (Alta/Edición)</h1>
+    <form>
+        <!-- id lo genera el sistema según el PDF -->
+        <label for="nombre">Nombre:</label><br>
+        <input type="text" id="nombre" name="nombre" required><br><br>
+
+        <label for="nombreCientifico">Nombre Científico:</label><br>
+        <input type="text" id="nombreCientifico" name="nombreCientifico"><br><br>
+
+        <label for="categoria">Categoría:</label><br>
+        <select id="categoria" name="categoria">
+            <option value="interior">interior</option>
+            <option value="exterior">exterior</option>
+            <option value="suculenta">suculenta</option>
+            <option value="aromatica">aromática</option>
+        </select><br><br>
+
+        <label>Luz:</label><br>
+        <input type="radio" id="sol" name="luz" value="sol pleno"> <label for="sol">sol pleno</label><br>
+        <input type="radio" id="media" name="luz" value="media sombra"> <label for="media">media sombra</label><br>
+        <input type="radio" id="sombra" name="luz" value="sombra"> <label for="sombra">sombra</label><br><br>
+
+        <label for="riego">Riego:</label><br>
+        <select id="riego" name="riego">
+            <option value="bajo">bajo</option>
+            <option value="medio">medio</option>
+            <option value="alto">alto</option>
+        </select><br><br>
+
+        <label for="precio">Precio:</label><br>
+        <input type="number" id="precio" name="precio" step="0.01" required><br><br>
+
+        <label for="stock">Stock:</label><br>
+        <input type="number" id="stock" name="stock" required><br><br>
+
+        <label for="fechaIngreso">Fecha de Ingreso:</label><br>
+        <input type="date" id="fechaIngreso" name="fechaIngreso"><br><br>
+
+        <label for="aptaMascotas">¿Apta Mascotas?:</label><br>
+        <select id="aptaMascotas" name="aptaMascotas">
+            <option value="si">sí</option>
+            <option value="no">no</option>
+        </select><br><br>
+         <label>Etiquetas (Selecciona varias):</label><br>
+        <input type="checkbox" id="purificadora" name="etiquetas" value="purificadora">
+        <label for="purificadora">purificadora</label><br>
+        
+        <input type="checkbox" id="floracion" name="etiquetas" value="floracion">
+        <label for="floracion">floración</label><br>
+        
+        <input type="checkbox" id="colgante" name="etiquetas" value="colgante">
+        <label for="colgante">colgante</label><br>
+        
+        <input type="checkbox" id="resistente" name="etiquetas" value="resistente">
+        <label for="resistente">resistente</label><br><br>
+        <label for="foto">URL de la Foto:</label><br>
+        <input type="url" id="foto" name="foto"><br><br>
+
+        <label for="notas">Notas / Cuidados particulares:</label><br>
+        <textarea id="notas" name="notas" rows="4" cols="40"></textarea><br><br>
+
+        <button type="submit">Guardar Planta</button>
+        <a href="listado.html" style="margin-left: 15px;">Cancelar</a>
+    </form>
+</body>
+</html>
