@@ -1,22 +1,79 @@
-<!DOCTYPE html>
+<<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vivero Raíz - Nosotros</title>
-    <link rel="stylesheet" href="planta.css">
+    <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
-    <nav>
-        <a href="index.html">Inicio</a> |
-        <a href="registro.html">Registro</a> |
-        <a href="nosotros.html">Nosotros</a> |
-        <a href="listado.html">Intranet (Admin)</a>
-    </nav>
 
-    <h1>Nuestra Historia y Equipo</h1>
+    <!-- El Header con el botón Ingresar bien acomodado adentro de la lista -->
+    <header>
+        <div class="logo-contenedor">
+            <h1>Vivero Raíz</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="catalogo.html">Catálogo</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="login.html" class="btn-ingresar">Ingresar</a></li>
+            </ul>
+        </nav>
+    </header>
+
     <main>
-        <p>Bienvenidos a Vivero Raíz. Somos un equipo de profesionales y apasionados por el desarrollo verde, dedicados a seleccionar los mejores ejemplares para transformar tus espacios.</p>
+        <!-- Bloque 1: Historia -->
+        <section class="historia-seccion">
+            <h2>Nuestra Historia</h2>
+            <p>Somos un vivero familiar dedicado con pasión al cuidado y cultivo de plantas. Iniciamos nuestro camino en el año 2015 con un pequeño invernadero y hoy nos enorgullece ayudar a nuestra comunidad a llenar sus hogares de vida y naturaleza.</p>
+        </section>
+
+        <!-- Bloque 2: Trayectoria / Linea de tiempo -->
+        <section class="linea-tiempo-seccion">
+            <h2>Nuestra Trayectoria</h2>
+            <div class="linea-tiempo">
+                <article class="hito">
+                    <h3>2015</h3>
+                    <p>Comenzamos como un proyecto familiar en el patio de nuestra casa.</p>
+                </article>
+                <article class="hito">
+                    <h3>2020</h3>
+                    <p>Abrimos las puertas de nuestro primer local de atención al público.</p>
+                </article>
+                <article class="hito">
+                    <h3>2026</h3>
+                    <p>Estrenamos nuestro catálogo digital para llegar a más hogares.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Bloque 3: Equipo en Grilla -->
+        <section class="equipo-seccion">
+            <h2>Nuestro Equipo</h2>
+            <div class="grilla-equipo">
+                <article class="miembro">
+                    <h3>Carlos Raíz</h3>
+                    <p>Fundador y Especialista en Plantas de Exterior</p>
+                </article>
+                <article class="miembro">
+                    <h3>Ana Verde</h3>
+                    <p>Encargada de Plantas de Interior y Decoración</p>
+                </article>
+                <article class="miembro">
+                    <h3>Luis Poda</h3>
+                    <p>Especialista en Mantenimiento y Herramientas</p>
+                </article>
+            </div>
+        </section>
     </main>
+
+    <footer>
+        <p>&copy; 2026 Vivero Raíz - Tecnicatura en Desarrollo de Software (ISTEA)</p>
+    </footer>
+
 </body>
 </html>
+
+

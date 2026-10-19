@@ -1,37 +1,106 @@
-<!DOCTYPE html>
-<html>
+<<!DOCTYPE html>
+<html lang="es">
 <head>
-    <title>Vivero Raiz - Catalogo</title>
-    <link rel="stylesheet" href="CATALOGO.CSS">
-
+    <meta charset="UTF-8">
+    <title>Vivero Raíz - Catálogo</title>
+    <!-- Conectamos al archivo unico de estilos -->
+    <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
 
-    <h1 style="color: green; background-color: lightseagreen; padding: 10px;">
-        Nuestro Catalogo de Plantas
-    </h1>
+    <!-- Encabezado unificado -->
+    <header>
+        <div class="logo-contenedor">
+            <img src="img/logovivero.jpg" alt="Logo de Vivero Raíz" width="50">
+            <span>Vivero Raíz</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="catalogo.html">Catálogo</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="login.html" class="btn-ingresar">Ingresar</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <p>
-        Aca podes ver las variedades de plantas que tenemos disponibles esta semana en el vivero.
-    </p> Planta Sansevieria (Ideal para el interior de tu casa)<br>
-    </p>
- 
- <div   class="contenedor-plantas">
-    
+    <!-- Contenido Principal -->
+    <main>
+        <section class="seccion-catalogo">
+            <h1>Nuestro Catálogo de Plantas</h1>
+            <p>Acá podés ver las variedades de plantas que tenemos disponibles esta semana en el vivero.</p>
 
-<img src="img/sansevieria.jpg" alt="Planta de interior" width="250">
-<img src="img/rosales.jpeg" alt="Planta de interior" width="250">
-<img src="img/ficus.jpg" alt="Planta de interior" width="250">
+            <div class="contenedor-plantas">
 
+                <!-- Planta 1 -->
+                <article class="producto-card">
+                    <img src="img/sansevieria.jpg" alt="Planta Sansevieria">
+                    <h3>Sansevieria</h3>
+                    <p class="cientifico">Sansevieria trifasciata</p>
+                    <p class="info-planta">Categoría: Interior · Riego: Bajo</p>
+                    <span class="precio">$3.500,00</span>
+                    <a href="planta.html" class="btn-detalle">Ver detalle</a>
+                </article>
 
+                <!-- Planta 2 -->
+                <article class="producto-card">
+                    <img src="img/rosales.jpeg" alt="Planta Rosales">
+                    <h3>Rosales</h3>
+                    <p class="cientifico">Rosa spp.</p>
+                    <p class="info-planta">Categoría: Exterior · Riego: Alto</p>
+                    <span class="precio">$4.200,00</span>
+                    <a href="planta.html" class="btn-detalle">Ver detalle</a>
+                </article>
 
+                <!-- Planta 3 -->
+                <article class="producto-card">
+                    <img src="img/ficus.jpg" alt="Planta Ficus">
+                    <h3>Ficus</h3>
+                    <p class="cientifico">Ficus benjamina</p>
+                    <p class="info-planta">Categoría: Interior · Riego: Medio</p>
+                    <span class="precio">$5.100,00</span>
+                    <a href="planta.html" class="btn-detalle">Ver detalle</a>
+                </article>
 
-</div>
+                <!-- Planta 4 -->
+                <article class="producto-card">
+                    <img src="img/succulent.jpg" alt="Planta Suculenta">
+                    <h3>Echeveria</h3>
+                    <p class="cientifico">Echeveria elegans</p>
+                    <p class="info-planta">Categoría: Suculenta · Riego: Bajo</p>
+                    <span class="precio">$1.800,00</span>
+                    <a href="planta.html" class="btn-detalle">Ver detalle</a>
+                </article>
 
+                <!-- Planta 5 -->
+                <article class="producto-card">
+                    <img src="img/menta.jpg" alt="Planta Aromática">
+                    <h3>Menta</h3>
+                    <p class="cientifico">Mentha piperita</p>
+                    <p class="info-planta">Categoría: Aromática · Riego: Medio</p>
+                    <span class="precio">$1.200,00</span>
+                    <a href="planta.html" class="btn-detalle">Ver detalle</a>
+                </article>
 
-    
+                <!-- Planta 6 -->
+                <article class="producto-card">
+                    <img src="img/potus.jpg" alt="Planta Potus">
+                    <h3>Potus</h3>
+                    <p class="cientifico">Epipremnum aureum</p>
+                    <p class="info-planta">Categoría: Interior · Riego: Medio</p>
+                    <span class="precio">$2.900,00</span>
+                    <a href="planta.html" class="btn-detalle">Ver detalle</a>
+                </article>
 
-    <a href="index.html" class="boton-estilo">Volver al Inicio</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Pie de pagina -->
+    <footer>
+        <p>&copy; 2026 Vivero Raíz - Tecnicatura en Desarrollo de Software (ISTEA)</p>
+    </footer>
 
 </body>
 </html>

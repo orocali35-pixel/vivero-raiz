@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Vivero Raíz - Detalle de Planta</title>
+    <!-- Conectamos al archivo unico de estilos -->
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+    <!-- Encabezado unificado e idéntico al resto del sitio -->
+    <header>
+        <div class="logo-contenedor">
+            <img src="img/logovivero.jpg" alt="Logo de Vivero Raíz" width="50">
+            <span>Vivero Raíz</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="catalogo.html">Catálogo</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="login.html" class="btn-ingresar">Ingresar</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Contenido principal de la ficha individual -->
+    <main>
+        <section class="formulario-contenedor" style="max-width: 800px;">
+            <h2>Ficha Detallada de la Planta</h2>
+            <p>Información técnica, cuidados específicos y requerimientos de la variedad seleccionada.</p>
+            
+            <br>
+            
+            <!-- Estructura de dos columnas simples: Foto a la izquierda, detalles a la derecha -->
+            <div style="display: flex; gap: 30px; flex-wrap: wrap; margin-top: 20px;">
+                
+                <!-- Galería/Foto (Requisito Entrega 2) -->
+                <div style="flex: 1; min-width: 280px; text-align: center;">
+                    <img src="img/sansevieria.jpg" alt="Ficha de Sansevieria" style="width: 100%; max-width: 320px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+                </div>
+
+                <!-- Tabla de Especificaciones y Bloque de Cuidados (Requisito Entrega 2) -->
+                <div style="flex: 1; min-width: 280px;">
+                    <h3>Sansevieria (Costilla de Adán)</h3>
+                    <p style="font-style: italic; color: #666; margin-bottom: 15px;">Sansevieria trifasciata</p>
+                    
+                    <span style="font-size: 1.6rem; font-weight: bold; color: var(--verde-principal); display: block; margin-bottom: 15px;">$3.500,00</span>
+
+                    <!-- Tabla de Especificaciones -->
+                    <table border="1" width="100%" style="border-collapse: collapse; margin-bottom: 20px; text-align: left;">
+                        <thead>
+                            <tr style="background-color: var(--verde-claro); color: var(--verde-principal);">
+                                <th style="padding: 8px;">Especificación</th>
+                                <th style="padding: 8px;">Valor</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td style="padding: 8px; font-weight: bold;">Categoría</td>
+                                <td style="padding: 8px;">Interior</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 8px; font-weight: bold;">Luz</td>
+                                <td style="padding: 8px;">Media sombra / Sombra</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 8px; font-weight: bold;">Apta Mascotas</td>
+                                <td style="padding: 8px;">No</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 8px; font-weight: bold;">Stock Disponible</td>
+                                <td style="padding: 8px;">10 unidades</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <!-- Bloque de Cuidados -->
+                    <div style="background-color: #f9f9f9; padding: 15px; border-left: 4px solid var(--verde-principal); border-radius: 4px;">
+                        <h4 style="color: var(--verde-principal); margin-bottom: 5px;">Bloque de Cuidados particulares:</h4>
+                        <p style="font-size: 0.95rem;">Riego bajo. Es una planta sumamente resistente purificadora de aire. Se recomienda regar únicamente cuando la tierra o el sustrato se encuentre completamente seco, evitando encharcamientos.</p>
+                    </div>
+                </div>
+            </div>
+
+            <br><br>
+            <a href="catalogo.html" class="btn-principal" style="display: inline-block;">⬅️ Volver al Catálogo</a>
+        </section>
+    </main>
+
+    <!-- Pie de página unificado -->
+    <footer>
+        <p>&copy; 2026 Vivero Raíz - Tecnicatura en Desarrollo de Software (ISTEA)</p>
+    </footer>
+
+</body>
+</html>

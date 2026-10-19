@@ -1,0 +1,338 @@
+:root {
+    --verde-principal: #2e5a44;
+    --verde-claro: #e8f0ec;
+    --texto-oscuro: #333333;
+    --blanco: #ffffff;
+    --fuente-base: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--fuente-base);
+    color: var(--texto-oscuro);
+    background-color: #f9f9f9;
+    line-height: 1.6;
+}
+
+/* Encabezado y Navegacion */
+header {
+    background-color: var(--verde-principal);
+    color: var(--blanco);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+}
+
+.logo-contenedor {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-contenedor span {
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+header nav ul li a {
+    color: var(--blanco);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+    color: #aae0c4;
+}
+
+.btn-ingresar {
+    display: inline-block;
+    background-color: #aae0c4;
+    color: #2e5a44 !important;
+    padding: 8px 16px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-decoration: none;
+    line-height: 1;
+}
+
+.btn-ingresar:hover {
+    background-color: var(--blanco);
+    color: #2e5a44 !important;
+}
+
+/* Pagina de Inicio */
+main {
+    padding: 40px 5%;
+    min-height: 80vh;
+}
+
+.bienvenida {
+    text-align: center;
+    margin-bottom: 50px;
+    background-color: var(--verde-claro);
+    padding: 40px;
+    border-radius: 10px;
+}
+
+.bienvenida h1 {
+    color: var(--verde-principal);
+    margin-bottom: 15px;
+}
+
+.btn-principal {
+    display: inline-block;
+    background-color: var(--verde-principal);
+    color: var(--blanco);
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.btn-principal:hover {
+    background-color: #1e3d2e;
+}
+
+.destacados h2 {
+    text-align: center;
+    color: var(--verde-principal);
+    margin-bottom: 30px;
+}
+
+.categorias-home {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.categoria-item {
+    background: var(--blanco);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    width: 300px;
+    text-align: center;
+}
+
+/* Seccion Catalogo */
+.seccion-catalogo h1 {
+    color: var(--verde-principal);
+    margin-bottom: 10px;
+}
+
+.contenedor-plantas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.producto-card {
+    background-color: var(--blanco);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.producto-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.producto-card h3 {
+    color: var(--verde-principal);
+    font-size: 1.3rem;
+}
+
+.producto-card .cientifico {
+    font-style: italic;
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+}
+
+.producto-card .info-planta {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.producto-card .precio {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: var(--texto-oscuro);
+    margin-bottom: 15px;
+    display: block;
+}
+
+.btn-detalle {
+    background-color: var(--verde-principal);
+    color: var(--blanco);
+    padding: 10px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    display: block;
+}
+
+.btn-detalle:hover {
+    background-color: #1e3d2e;
+}
+
+/* Formularios de Gestion y Contacto */
+.formulario-contenedor {
+    max-width: 500px;
+    margin: 0 auto 40px auto;
+    background-color: var(--blanco);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.formulario-contenedor h2 {
+    color: var(--verde-principal);
+    margin-bottom: 10px;
+    font-size: 1.6rem;
+}
+
+.formulario-contenedor p {
+    color: #666;
+    margin-bottom: 20px;
+    font-size: 0.95rem;
+}
+
+.mi-formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.campo-grupo {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.campo-grupo label {
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.campo-grupo input, 
+.campo-grupo select, 
+.campo-grupo textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: var(--fuente-base);
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.campo-grupo input:focus, 
+.campo-grupo select:focus, 
+.campo-grupo textarea:focus {
+    outline: none;
+    border-color: var(--verde-principal);
+    box-shadow: 0 0 5px rgba(46, 90, 68, 0.3);
+}
+
+.campo-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.9rem;
+}
+
+.btn-formulario {
+    background-color: var(--verde-principal);
+    color: var(--blanco);
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-formulario:hover {
+    background-color: #1e3d2e;
+}
+
+.mensaje-error-box {
+    background-color: #f8d7da;
+    color: #721c24;
+    padding: 12px;
+    border-left: 5px solid #f5c6cb;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+
+/* Seccion Institucional */
+.historia-seccion, .linea-tiempo-seccion, .equipo-seccion {
+    margin-bottom: 40px;
+}
+
+.historia-seccion h2, .linea-tiempo-seccion h2, .equipo-seccion h2 {
+    color: var(--verde-principal);
+    margin-bottom: 15px;
+    border-bottom: 2px solid var(--verde-claro);
+    padding-bottom: 5px;
+}
+
+.linea-tiempo, .grilla-equipo {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 15px;
+}
+
+.hito, .miembro {
+    background-color: var(--blanco);
+    padding: 20px;
+    border-radius: 6px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    flex: 1;
+    min-width: 250px;
+}
+
+.hito h3 {
+    color: var(--verde-principal);
+    margin-bottom: 5px;
+}
+
+/* Pie de pagina */
+footer {
+    background-color: #333333;
+    color: var(--blanco);
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    font-size: 0.9rem;
+
+    
+}

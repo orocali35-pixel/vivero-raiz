@@ -3,78 +3,144 @@
 <head>
     <meta charset="UTF-8">
     <title>Intranet - Formulario de Planta</title>
-    <link rel="stylesheet" href="planta.css">
+    <!-- Conectamos al archivo unico de estilos -->
+    <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
-    <nav>
-        <a href="index.html">⬅️ Volver al Sitio Público</a> |
-        <a href="listado.html">Listado de Plantas</a> |
-        <a href="planta-form.html">Cargar Planta</a>
-    </nav>
 
-    <h1>Gestión de Planta (Alta/Edición)</h1>
-    <form>
-        <!-- id lo genera el sistema según el PDF -->
-        <label for="nombre">Nombre:</label><br>
-        <input type="text" id="nombre" name="nombre" required><br><br>
+    <!-- Encabezado unificado de la Intranet -->
+    <header>
+        <div class="logo-contenedor">
+            <span>Vivero Raíz - Admin</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">⬅️ Sitio Público</a></li>
+                <li><a href="listado.html">Listado de Plantas</a></li>
+                <li><a href="planta-form.html">Cargar Planta</a></li>
+            </ul>
+        </nav>
+    </header>
 
-        <label for="nombreCientifico">Nombre Científico:</label><br>
-        <input type="text" id="nombreCientifico" name="nombreCientifico"><br><br>
+    <!-- Cuerpo principal -->
+    <main>
+        <section class="formulario-contenedor" style="max-width: 600px;">
+            <h2>Gestión de Planta (Alta/Edición)</h2>
+            <p>Introduce los datos técnicos para actualizar la información en la base de datos.</p>
 
-        <label for="categoria">Categoría:</label><br>
-        <select id="categoria" name="categoria">
-            <option value="interior">interior</option>
-            <option value="exterior">exterior</option>
-            <option value="suculenta">suculenta</option>
-            <option value="aromatica">aromática</option>
-        </select><br><br>
+            <form action="#" method="POST" class="mi-formulario">
+                
+                <div class="campo-grupo">
+                    <label for="nombre">Nombre Común:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                </div>
 
-        <label>Luz:</label><br>
-        <input type="radio" id="sol" name="luz" value="sol pleno"> <label for="sol">sol pleno</label><br>
-        <input type="radio" id="media" name="luz" value="media sombra"> <label for="media">media sombra</label><br>
-        <input type="radio" id="sombra" name="luz" value="sombra"> <label for="sombra">sombra</label><br><br>
+                <div class="campo-grupo">
+                    <label for="nombreCientifico">Nombre Científico:</label>
+                    <input type="text" id="nombreCientifico" name="nombreCientifico">
+                </div>
 
-        <label for="riego">Riego:</label><br>
-        <select id="riego" name="riego">
-            <option value="bajo">bajo</option>
-            <option value="medio">medio</option>
-            <option value="alto">alto</option>
-        </select><br><br>
+                <div class="campo-grupo">
+                    <label for="categoria">Categoría:</label>
+                    <select id="categoria" name="categoria">
+                        <option value="interior">Interior</option>
+                        <option value="exterior">Exterior</option>
+                        <option value="suculenta">Suculenta</option>
+                        <option value="aromatica">Aromática</option>
+                    </select>
+                </div>
 
-        <label for="precio">Precio:</label><br>
-        <input type="number" id="precio" name="precio" step="0.01" required><br><br>
+                <div class="campo-grupo">
+                    <label>Requerimiento de Luz:</label>
+                    <div class="campo-checkbox">
+                        <input type="radio" id="sol" name="luz" value="sol pleno"> 
+                        <label for="sol">Sol pleno</label>
+                    </div>
+                    <div class="campo-checkbox">
+                        <input type="radio" id="media" name="luz" value="media sombra"> 
+                        <label for="media">Media sombra</label>
+                    </div>
+                    <div class="campo-checkbox">
+                        <input type="radio" id="sombra" name="luz" value="sombra"> 
+                        <label for="sombra">Sombra</label>
+                    </div>
+                </div>
 
-        <label for="stock">Stock:</label><br>
-        <input type="number" id="stock" name="stock" required><br><br>
+                <div class="campo-grupo">
+                    <label for="riego">Nivel de Riego:</label>
+                    <select id="riego" name="riego">
+                        <option value="bajo">Bajo</option>
+                        <option value="medio">Medio</option>
+                        <option value="alto">Alto</option>
+                    </select>
+                </div>
 
-        <label for="fechaIngreso">Fecha de Ingreso:</label><br>
-        <input type="date" id="fechaIngreso" name="fechaIngreso"><br><br>
+                <div class="campo-grupo">
+                    <label for="precio">Precio:</label>
+                    <input type="number" id="precio" name="precio" step="0.01" required>
+                </div>
 
-        <label for="aptaMascotas">¿Apta Mascotas?:</label><br>
-        <select id="aptaMascotas" name="aptaMascotas">
-            <option value="si">sí</option>
-            <option value="no">no</option>
-        </select><br><br>
-         <label>Etiquetas (Selecciona varias):</label><br>
-        <input type="checkbox" id="purificadora" name="etiquetas" value="purificadora">
-        <label for="purificadora">purificadora</label><br>
-        
-        <input type="checkbox" id="floracion" name="etiquetas" value="floracion">
-        <label for="floracion">floración</label><br>
-        
-        <input type="checkbox" id="colgante" name="etiquetas" value="colgante">
-        <label for="colgante">colgante</label><br>
-        
-        <input type="checkbox" id="resistente" name="etiquetas" value="resistente">
-        <label for="resistente">resistente</label><br><br>
-        <label for="foto">URL de la Foto:</label><br>
-        <input type="url" id="foto" name="foto"><br><br>
+                <div class="campo-grupo">
+                    <label for="stock">Stock Disponible:</label>
+                    <input type="number" id="stock" name="stock" required>
+                </div>
 
-        <label for="notas">Notas / Cuidados particulares:</label><br>
-        <textarea id="notas" name="notas" rows="4" cols="40"></textarea><br><br>
+                <div class="campo-grupo">
+                    <label for="fechaIngreso">Fecha de Ingreso:</label>
+                    <input type="date" id="fechaIngreso" name="fechaIngreso">
+                </div>
 
-        <button type="submit">Guardar Planta</button>
-        <a href="listado.html" style="margin-left: 15px;">Cancelar</a>
-    </form>
+                <div class="campo-grupo">
+                    <label for="aptaMascotas">¿Es apta para Mascotas?:</label>
+                    <select id="aptaMascotas" name="aptaMascotas">
+                        <option value="si">Sí</option>
+                        <option value="no">No</option>
+                    </select>
+                </div>
+
+                <div class="campo-grupo">
+                    <label>Etiquetas aplicables:</label>
+                    <div class="campo-checkbox">
+                        <input type="checkbox" id="purificadora" name="etiquetas" value="purificadora">
+                        <label for="purificadora">Purificadora</label>
+                    </div>
+                    <div class="campo-checkbox">
+                        <input type="checkbox" id="floracion" name="etiquetas" value="floracion">
+                        <label for="floracion">Floración</label>
+                    </div>
+                    <div class="campo-checkbox">
+                        <input type="checkbox" id="colgante" name="etiquetas" value="colgante">
+                        <label for="colgante">Colgante</label>
+                    </div>
+                    <div class="campo-checkbox">
+                        <input type="checkbox" id="resistente" name="etiquetas" value="resistente">
+                        <label for="resistente">Resistente</label>
+                    </div>
+                </div>
+
+                <div class="campo-grupo">
+                    <label for="foto">URL de la Imagen (Foto):</label>
+                    <input type="url" id="foto" name="foto" placeholder="https://ejemplo.com">
+                </div>
+
+                <div class="campo-grupo">
+                    <label for="notes">Notas / Cuidados particulares:</label>
+                    <textarea id="notes" name="notas" rows="4"></textarea>
+                </div>
+
+                <br>
+                <div style="display: flex; gap: 15px; align-items: center;">
+                    <button type="submit" class="btn-formulario" style="flex: 1;">Guardar Planta</button>
+                    <a href="listado.html" style="color: #666; text-decoration: none; font-weight: bold;">Cancelar</a>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <!-- Pie de página unificado -->
+    <footer>
+        <p>&copy; 2026 Vivero Raíz - Tecnicatura en Desarrollo de Software (ISTEA)</p>
+    </footer>
+
 </body>
 </html>

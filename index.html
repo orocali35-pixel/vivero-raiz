@@ -1,39 +1,61 @@
-<!DOCTYPE html>
-<html>
+<<!DOCTYPE html>
+<html lang="es">
 <head>
-    <title>viveroraiz-inicio</title>
-    <link  rel="stylesheet"  href="planta.css">
-    
+    <meta charset="UTF-8">
+    <title>Vivero Raíz - Inicio</title>
+    <!-- Enlazamos al CSS único del sitio para que tome los colores lindos de la intranet -->
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
 <body>
- <nav>
-        <a href="index.html">Inicio</a> |
-        <a href="registro.html">Registro</a> |
-        <a href="nosotros.html">Nosotros</a> |
-        <a href="listado.html">Intranet (Admin)</a>
-    </nav>
 
+    <!-- 1. EL HEADER (El techo de tu página, idéntico en todo el sitio) -->
+    <header>
+        <div class="logo-contenedor">
+            <img src="img/logovivero.jpg" alt="Logo de Vivero Raíz" width="50">
+            <span>Vivero Raíz</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="catalogo.html">Catálogo</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="login.html" class="btn-ingresar">Ingresar</a></li>
+            </ul>
+        </nav>
+    </header>
 
+    <!-- 2. EL MAIN (El cuerpo principal con el contenido de la Home) -->
+    <main>
+        <!-- Sección de Bienvenida -->
+        <section class="bienvenida">
+            <h1>Bienvenidos a Vivero Raíz</h1>
+            <p>Somos un vivero familiar dedicado a la venta de plantas de interior, exterior, macetas y herramientas de jardinería.</p>
+            <a href="catalogo.html" class="btn-principal">¡Ver Catálogo!</a>
+        </section>
 
-    <h1>Bienvenidos Vivero  Raiz  </h1>
-        
+        <!-- Sección extra para que la Home NO esté vacía (Requisito del profesor) -->
+        <section class="destacados">
+            <h2>Nuestras Variedades</h2>
+            <div class="categorias-home">
+                <article class="categoria-item">
+                    <h3>Plantas de Interior</h3>
+                    <p>Ideales para decorar tu living o tu oficina.</p>
+                </article>
+                <article class="categoria-item">
+                    <h3>Plantas de Exterior</h3>
+                    <p>Variedades resistentes para tu patio o jardín.</p>
+                </article>
+            </div>
+        </section>
+    </main>
 
-   
-
-<img src="img/logovivero.jpg" alt="logo de vivero raiz" width="100">
-
-
-
-
-    <p>
-        somos un vivero familiar dedicado a la venta de plntas de interior, exterior, macetas y herramientas de jardineria.
-
-    </p>
-
-    <a href="catalogo.html" 
-    >ver catalogo!</a>
-
-
-        
+    <!-- 3. EL FOOTER (El pie de página obligatorio) -->
+    <footer>
+        <p>&copy; 2026 Vivero Raíz - Tecnicatura en Desarrollo de Software (ISTEA)</p>
+    </footer>
 
 </body>
 </html>
+
+

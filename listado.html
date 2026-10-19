@@ -1,44 +1,70 @@
-<!DOCTYPE html>
+<<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <title>Intranet - Listado de Plantas</title>
-    <link rel="stylesheet" href="planta.css">
+    <!-- Conectamos al archivo unico de estilos -->
+    <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
-    <nav>
-        <a href="index.html">⬅️ Volver al Sitio Público</a> |
-        <a href="listado.html">Listado de Plantas</a> |
-        <a href="planta-form.html">Cargar Planta</a>
-    </nav>
 
-    <h1>Intranet: Panel de Gestión</h1>
-    <a href="planta-form.html">➕ Cargar Nueva Planta</a>
-    <br><br>
-    <table>
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>Nombre</th>
-                <th>Categoría</th>
-                <th>Precio</th>
-                <th>Stock</th>
-                <th>Acciones</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>1</td>
-                <td>ficus</td>
-                <td>interior</td>
-                <td>$4500.00</td>
-                <td>15</td>
-                <td>
-                    <a href="planta-form.html">✏️ Editar</a> | 
-                    <a href="#">❌ Eliminar</a>
-                </td>
-            </tr>
-        </tbody>
-    </table>
+    <!-- Encabezado de la Intranet (Con el formato unificado del sitio) -->
+    <header>
+        <div class="logo-contenedor">
+            <span>Vivero Raíz - Admin</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">⬅️ Sitio Público</a></li>
+                <li><a href="listado.html">Listado de Plantas</a></li>
+                <li><a href="planta-form.html">Cargar Planta</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Cuerpo principal con la tabla de gestion -->
+    <main>
+        <section class="seccion-listado">
+            <h2>Intranet: Panel de Gestión</h2>
+            <p>Administración de los productos del vivero.</p>
+            
+            <br>
+            <a href="planta-form.html" class="btn-principal" style="margin-top: 0;">➕ Cargar Nueva Planta</a>
+            <br><br>
+
+            <!-- Agregamos un par de atributos basicos a la tabla para que se vea ordenada -->
+            <table border="1" width="100%" style="border-collapse: collapse; margin-top: 15px; text-align: left; background-color: #ffffff;">
+                <thead>
+                    <tr style="background-color: #2e5a44; color: #ffffff;">
+                        <th style="padding: 12px;">ID</th>
+                        <th style="padding: 12px;">Nombre</th>
+                        <th style="padding: 12px;">Categoría</th>
+                        <th style="padding: 12px;">Precio</th>
+                        <th style="padding: 12px;">Stock</th>
+                        <th style="padding: 12px;">Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="padding: 12px;">1</td>
+                        <td style="padding: 12px; text-transform: capitalize;">ficus</td>
+                        <td style="padding: 12px; text-transform: capitalize;">interior</td>
+                        <td style="padding: 12px;">$4500.00</td>
+                        <td style="padding: 12px;">15</td>
+                        <td style="padding: 12px;">
+                            <a href="planta-form.html" style="color: #2e5a44; font-weight: bold; text-decoration: none;">✏️ Editar</a> | 
+                            <a href="#" style="color: #a30000; font-weight: bold; text-decoration: none;">❌ Eliminar</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <!-- Pie de pagina obligatorio -->
+    <footer>
+        <p>&copy; 2026 Vivero Raíz - Tecnicatura en Desarrollo de Software (ISTEA)</p>
+    </footer>
+
 </body>
 </html>
