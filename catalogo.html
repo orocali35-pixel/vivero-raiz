@@ -1,14 +1,52 @@
-<<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <title>Vivero Raíz - Catálogo</title>
-    <!-- Conectamos al archivo unico de estilos -->
     <link rel="stylesheet" href="css/estilos.css">
+    <style>
+        .barra-filtros-it {
+            display: flex;
+            gap: 15px;
+            background-color: #e8f0ec;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 25px;
+            flex-wrap: wrap;
+            align-items: flex-end;
+        }
+        .filtro-control-it {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            flex: 1;
+            min-width: 160px;
+        }
+        .filtro-control-it label {
+            font-weight: 600;
+            font-size: 0.85rem;
+            color: #2e5a44;
+        }
+        .filtro-control-it input, .filtro-control-it select {
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .btn-limpiar-it {
+            background-color: #666;
+            color: #fff;
+            padding: 9px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .btn-limpiar-it:hover { background-color: #444; }
+    </style>
 </head>
 <body>
 
-    <!-- Encabezado unificado -->
     <header>
         <div class="logo-contenedor">
             <img src="img/logovivero.jpg" alt="Logo de Vivero Raíz" width="50">
@@ -25,15 +63,39 @@
         </nav>
     </header>
 
-    <!-- Contenido Principal -->
     <main>
         <section class="seccion-catalogo">
             <h1>Nuestro Catálogo de Plantas</h1>
-            <p>Acá podés ver las variedades de plantas que tenemos disponibles esta semana en el vivero.</p>
+            <p style="margin-bottom: 15px;">Acá podés ver las variedades de plantas que tenemos disponibles esta semana en el vivero.</p>
+
+            <div class="barra-filtros-it">
+                <div class="filtro-control-it">
+                    <label for="buscador">Buscar por nombre:</label>
+                    <input type="text" id="buscador" placeholder="Ej: Ficus, Potus...">
+                </div>
+                <div class="filtro-control-it">
+                    <label for="filtro-categoria">Categoría:</label>
+                    <select id="filtro-categoria">
+                        <option value="todos">Todas las categorías</option>
+                        <option value="Interior">Interior</option>
+                        <option value="Exterior">Exterior</option>
+                        <option value="Suculenta">Suculentas</option>
+                        <option value="Aromática">Aromáticas</option>
+                    </select>
+                </div>
+                <div class="filtro-control-it">
+                    <label for="orden">Ordenar por precio:</label>
+                    <select id="orden">
+                        <option value="defecto">Por defecto</option>
+                        <option value="precio-asc">Menor precio primero</option>
+                        <option value="precio-desc">Mayor precio primero</option>
+                    </select>
+                </div>
+                <button id="btn-limpiar" class="btn-limpiar-it">Limpiar Filtros</button>
+            </div>
 
             <div class="contenedor-plantas">
 
-                <!-- Planta 1 -->
                 <article class="producto-card">
                     <img src="img/sansevieria.jpg" alt="Planta Sansevieria">
                     <h3>Sansevieria</h3>
@@ -43,7 +105,6 @@
                     <a href="planta.html" class="btn-detalle">Ver detalle</a>
                 </article>
 
-                <!-- Planta 2 -->
                 <article class="producto-card">
                     <img src="img/rosales.jpeg" alt="Planta Rosales">
                     <h3>Rosales</h3>
@@ -53,7 +114,6 @@
                     <a href="planta.html" class="btn-detalle">Ver detalle</a>
                 </article>
 
-                <!-- Planta 3 -->
                 <article class="producto-card">
                     <img src="img/ficus.jpg" alt="Planta Ficus">
                     <h3>Ficus</h3>
@@ -63,7 +123,6 @@
                     <a href="planta.html" class="btn-detalle">Ver detalle</a>
                 </article>
 
-                <!-- Planta 4 -->
                 <article class="producto-card">
                     <img src="img/succulent.jpg" alt="Planta Suculenta">
                     <h3>Echeveria</h3>
@@ -73,7 +132,6 @@
                     <a href="planta.html" class="btn-detalle">Ver detalle</a>
                 </article>
 
-                <!-- Planta 5 -->
                 <article class="producto-card">
                     <img src="img/menta.jpg" alt="Planta Aromática">
                     <h3>Menta</h3>
@@ -83,7 +141,6 @@
                     <a href="planta.html" class="btn-detalle">Ver detalle</a>
                 </article>
 
-                <!-- Planta 6 -->
                 <article class="producto-card">
                     <img src="img/potus.jpg" alt="Planta Potus">
                     <h3>Potus</h3>
@@ -97,10 +154,19 @@
         </section>
     </main>
 
-    <!-- Pie de pagina -->
     <footer>
         <p>&copy; 2026 Vivero Raíz - Tecnicatura en Desarrollo de Software (ISTEA)</p>
     </footer>
 
+    <script src="js/datos.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/auth.js"></script>
+
 </body>
 </html>
+
+
+
+
+
+
