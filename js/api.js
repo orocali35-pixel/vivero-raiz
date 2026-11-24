@@ -1,4 +1,4 @@
-const API_URL = "https://mockapi.io";
+const API_URL = "https://6ae0a63fbe3bc8fead97a7c0.mockapi.io/api/plantas";
 let plantas = [];
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -59,7 +59,7 @@ function renderizarTarjetas(lista) {
     lista.forEach(p => {
         contenedor.innerHTML += `
             <article class="producto-card">
-                <img src="img/${p.imagen || 'sansevieria.jpg'}" alt="${p.nombre}">
+                <img src="${p.foto || (p.imagen ? 'img/' + p.imagen : 'img/sansevieria.jpg')}" onerror="this.src='img/sansevieria.jpg'" alt="${p.nombre}">
                 <h3>${p.nombre}</h3>
                 <p class="cientifico">${p.nombreCientifico || ''}</p>
                 <p class="info-planta">Categoría: ${p.categoria} · Riego: ${p.riego || 'Medio'}</p>
